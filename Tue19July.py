@@ -52,15 +52,23 @@ print(f"Kozak seq. count: {count_kozak(seq)}")
 
 import random
 
-target_seq = 'AAAA'
-random_seq = 'GCTA'
-check = ''
+def split(str):
+    return [char for char in str]
+
+target_seq = split('AAAA')
+random_seq = split('GCTA')
+check = [None] * 4
+B = 100000000
 count = 0
-while check != target_seq:
-    for i in range(4):
-        if random_seq[i] == target_seq[i]:
-            check[i] = random_seq[i]
-        else:
-            index = randint(-1, 4)
-            check[i] = random_seq[index]
-    count += 1
+for i in range(B):
+    while check != target_seq:
+        for i in range(4):
+            if random_seq[i] == target_seq[i]:
+                check[i] = random_seq[i]
+            else:
+                index = random.randint(0, 3)
+                check[i] = random_seq[index]
+            count += 1
+    print(f"Done with {i}.")
+avg = count/B
+print(f"Avg: {avg}")
