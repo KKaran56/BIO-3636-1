@@ -37,10 +37,3 @@ ax[2].plot(x2, y2)
 # There is another plot called a violin plot. It is a good idea to be cautious when using such plots because they produce a lot of smoothening, which only makes
 # sense when there is a large data set.
 
-import openpyxl
-
-wb = openpyxl.load_workbook("bdata.xlsx")
-sheet_list = wb.sheetnames
-print(sheet_list)
-
-
