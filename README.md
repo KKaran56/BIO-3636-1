@@ -1,3 +1,2 @@
-# BIO-3636-1
-Course Name: Python for Research in Life Sciences
-Taught at Ashoka University by Sudipta Tung for Summer 2022 semester.
+# BIO3636
+Code I wrote for the course Python for Research in Life Sciences taught at Ashoka University by Professor Sudipta Tung for the Summer 2022 semester.
